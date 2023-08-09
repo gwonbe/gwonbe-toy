@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Old Phone</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/26cf5b99b8.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="container">
+        <table id="phone">
+            <!-- 카메라 영역 -->
+            <tr>
+                <td class="phone-middle">
+                    <p id="camera"><br></p>
+                </td>
+            </tr>
+            <!-- 화면 영역 -->
+            <tr>
+                <td class="phone-main" id="phone-screen">
+                    <p id="input"></p>
+                </td>
+            </tr>
+            <!-- 중간 폴딩 영역 -->
+            <tr>
+                <td class="phone-middle">
+                    <br>
+                </td>
+            </tr>
+            <!-- 하단 단추 영역 -->
+            <tr>
+                <td class="phone-main" id="phone-button-area">
+                    <!-- 원형 버튼 -->
+                    <div id="button-circle">
+                        <table>
+                            <tr>
+                                <td></td>
+                                <td><i class="fa-solid fa-caret-up" onmouseover="circleBtnOver(this)" onmouseout="circleBtnOut(this)"></i></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td><i class="fa-solid fa-caret-left" onmouseover="circleBtnOver(this)" onmouseout="circleBtnOut(this)"></i></td>
+                                <td><strong onmouseover="circleBtnOver(this)" onmouseout="circleBtnOut(this)">OK</strong></td>
+                                <td><i class="fa-solid fa-caret-right" onmouseover="circleBtnOver(this)" onmouseout="circleBtnOut(this)"></i></i></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td><i class="fa-solid fa-caret-down" onmouseover="circleBtnOver(this)" onmouseout="circleBtnOut(this)"></i></td>
+                                <td></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <!-- 통화 버튼 -->
+                    <table id="button-call">
+                        <tr>
+                            <td><img src="img_call_l.png" onclick="handleCallButtonL()" onmouseover="callBtnOver(this)" onmouseout="callBtnOut(this)"></td>
+                            <td><img src="img_call_r.png" onclick="handleCallButtonR()" onmouseover="callBtnOver(this)" onmouseout="callBtnOut(this)"></td>
+                        </tr>
+                    </table>
+                    <!-- 숫자 패드 -->
+                    <table id="number-pad">
+                        <tr>
+                            <td><button onclick="handleNumberPad('1')">1</button></td>
+                            <td><button onclick="handleNumberPad('2')">2</button></td>
+                            <td><button onclick="handleNumberPad('3')">3</button></td>
+                        </tr>
+                        <tr>
+                            <td><button onclick="handleNumberPad('4')">4</button></td>
+                            <td><button onclick="handleNumberPad('5')">5</button></td>
+                            <td><button onclick="handleNumberPad('6')">6</button></td>
+                        </tr>
+                        <tr>
+                            <td><button onclick="handleNumberPad('7')">7</button></td>
+                            <td><button onclick="handleNumberPad('8')">8</button></td>
+                            <td><button onclick="handleNumberPad('9')">9</button></td>
+                        </tr>
+                        <tr>
+                            <td><button onclick="handleNumberPad('*')">*</button></td>
+                            <td><button onclick="handleNumberPad('0')">0</button></td> 
+                            <td><button onclick="handleNumberPad('#')">#</button></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
