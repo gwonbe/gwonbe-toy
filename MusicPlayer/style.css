@@ -1,0 +1,28 @@
+/* 폰트 - 한국기계연구원 */
+@font-face {
+    font-family: 'KIMM_Bold';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2212@1.0/KIMM_Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* 전체 */
+* {
+    font-family: 'KOTRAHOPE';
+}
+
+/* body 수평수직 정렬 */
+#body{
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+/* title 제목 */
+#title{
+    font-size: 40px;
+    font-weight: bold;
+}
