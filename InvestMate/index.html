@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Invest Mate</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div>
+    <p class="p-title">연환산 수익률 계산기</p>
+
+    <div class="div-grid">
+      <span>
+        <label class="label">시작일</label>
+        <input class="input" id="start" type="date" value="2025-09-21">
+      </span>
+      <span>
+        <label class="label">종료일</label>
+        <input class="input" id="end" type="date" value="2025-09-28">
+      </span>
+      <span>
+        <label class="label">투자원금 (원)</label>
+        <input class="input" id="principal" type="number" min="0" value="100000">
+      </span>
+      <span>
+        <label class="label">손익금 (원)</label>
+        <input class="input" id="profit" type="number" min="-1000000000" value="100">
+      </span>
+    </div>
+
+    <div class="actions">
+      <button class="button" id="addRow">행 추가</button>
+      <button class="button" id="clear">입력 초기화</button>
+      <button class="button" id="copySheet">수식 복사</button>
+    </div>
+
+    <table id="tbl" class="table">
+      <thead>
+        <tr>
+          <th class="cell cell-header">시작</th>
+          <th class="cell cell-header">종료</th>
+          <th class="cell cell-header">투자원금</th>
+          <th class="cell cell-header">손익</th>
+          <th class="cell cell-header">기간(일)</th>
+          <th class="cell cell-header cell-number">단기수익률(%)</th>
+          <th class="cell cell-header cell-number">연환산수익률(%)</th>
+          <th class="cell cell-header">수식</th>
+          <th class="cell cell-header">작업</th>
+        </tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+
+    <p class="p-explanation">공식 : 단기 수익률 = (손익 ÷ 투자원금) × 100<br>연환산 수익률 = (손익 ÷ 투자원금) × (365 ÷ 기간_일수) × 100</p>
+    <div class="formula" id="singleFormula">예 : =(100/100000)*(365/8)*100</div>
+    <footer class="footer">날짜 계산 시 <strong>종료일 포함</strong> (기간 = 종료 - 시작 + 1) 방식으로 계산합니다.</footer>
+  
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
