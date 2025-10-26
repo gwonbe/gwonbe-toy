@@ -23,16 +23,9 @@
     --color-classy-palette-5: #e2b2ca;
 
     /* Font size */
-    --font-large: 48px;
     --font-medium: 28px;
     --font-regular: 18px;
     --font-small: 16px;
-    --font-micro: 14px;
-
-    /* Font weight */
-    --weight-bold: 700;
-    --weight-semi-bold: 600;
-    --weight-regular: 400;
 }
 
 body{
@@ -46,8 +39,10 @@ body{
 }
 
 .div-grid {
-    display: flex;
-    gap: 30px; /* 아이템 간의 간격 설정 */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    max-width: 900px;
 }
 
 .label{
@@ -55,13 +50,20 @@ body{
     color: var(--color-classy-palette-2);
 }
 
-.input{
+.input,
+.r-start,
+.r-end,
+.r-principal,
+.r-valuation {
     width: 100%;
+    min-width: 160px;
+    max-width: 200px;
     padding: 8px;
     border: 1px solid var(--color-classy-palette-2);
     border-radius: 8px;
     margin-top: 10px;
     margin-bottom: 3px;
+    box-sizing: border-box;
 }
 
 .button{
@@ -71,6 +73,12 @@ body{
     padding: 8px 12px;
     border-radius: 8px;
     cursor: pointer;
+}
+
+.actions{
+    display: flex;
+    gap: 8px;
+    margin-top: 12px;
 }
 
 .table{
@@ -90,13 +98,13 @@ body{
     background-color: var(--color-classy-palette-5);
 }
 
+.cell-number{
+    text-align: right;
+}
+
 .p-explanation{
     color: var(--color-classy-palette-2);
     font-size: var(--font-small);
-}
-
-.cell-number{
-    text-align: right;
 }
 
 .formula{
@@ -106,12 +114,6 @@ body{
     font-family: monospace;
     font-size: var(--font-small);
     border: 1px solid var(--color-classy-palette-3);
-}
-
-.actions{
-    display: flex;
-    gap: 8px;
-    margin-top: 12px;
 }
 
 .footer{
